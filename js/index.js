@@ -41,96 +41,102 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-const getTitle = document.querySelector('title')
-getTitle.textContent = 'Great Idea'
+          // nav bar
+const navBar = document.querySelectorAll('nav a')
 
-const navLink1 = document.querySelector('a:nth-of-type(1)')
-const navLink2 = document.querySelector('a:nth-of-type(2)')
-const navLink3 = document.querySelector('a:nth-of-type(3)')
-const navLink4 = document.querySelector('a:nth-of-type(4)')
-const navLink5 = document.querySelector('a:nth-of-type(5)')
-const navLink6 = document.querySelector('a:nth-of-type(6)')
+const navLink1 = navBar[0]
+const navLink2 = navBar[1]
+const navLink3 = navBar[2]
+const navLink4 = navBar[3]
+const navLink5 = navBar[4]
+const navLink6 = navBar[5]
 
-navLink1.textContent = 'Services'
-navLink2.textContent = 'Product'
-navLink3.textContent = 'Vision'
-navLink4.textContent = 'Features'
-navLink5.textContent = 'About'
-navLink6.textContent = 'Contact'
+// const navLink1 = navBar.querySelector('a:nth-of-type(1)')
+// const navLink2 = navBar.querySelector('a:nth-of-type(2)')
+// const navLink3 = navBar.querySelector('a:nth-of-type(3)')
+// const navLink4 = navBar.querySelector('a:nth-of-type(4)')
+// const navLink5 = navBar.querySelector('a:nth-of-type(5)')
+// const navLink6 = navBar.querySelector('a:nth-of-type(6)')
 
-const pageTitle = document.querySelector('h1')
-pageTitle.innerHTML = 'DOM <br> IS <br> AWESOME' 
+navLink1.textContent = siteContent['nav']['nav-item-1']
+navLink2.textContent = siteContent['nav']['nav-item-2']
+navLink3.textContent = siteContent['nav']['nav-item-3']
+navLink4.textContent = siteContent['nav']['nav-item-4']
+navLink5.textContent = siteContent['nav']['nav-item-5']
+navLink6.textContent = siteContent['nav']['nav-item-6']
 
-const getStartedButton = document.querySelector('button')
-getStartedButton.textContent = 'Get Started'
+// top section title and button
+const topSection = document.querySelector('.cta');
 
-const firstImage = document.querySelector('#cta-img')
-firstImage.src = 'img/header-img.png'
+const topSectTitle = topSection.querySelector('.cta-text h1');
+const topSectImage = topSection.querySelector('#cta-img');
+const topSectButton = topSection.querySelector('button');
 
-// adding h4 titles
-const allTitles = document.querySelectorAll('h4')
 
-// console.log(allTitles)
-const title1 = allTitles[0]
-title1.textContent ='FEATURES'
+topSectTitle.textContent = siteContent['cta']['h1']
+topSectButton.textContent = siteContent['cta']['button']
+topSectImage.setAttribute('src', siteContent['cta']['img-src'])
 
-const title2 = allTitles[1]
-title2.textContent = 'ABOUT'
+// middle section -- top-content
+const midSectImg = document.querySelector('#middle-img')
+const midSection = document.querySelector('.main-content .top-content')
 
-const title3 = allTitles[2]
-title3.textContent = 'SERVICES'
 
-const title4 = allTitles[3]
-title4.textContent = 'PRODUCT'
+const midSectTitle1 = midSection.querySelector('.text-content:nth-of-type(1) h4')
+const midSectTitle2 = midSection.querySelector('.text-content:nth-of-type(2) h4')
 
-const title5 = allTitles[4]
-title5.textContent = 'VISION'
+// middle section -- bottom-content
+const midSectionBottom = document.querySelector('.main-content .bottom-content')
+const midSectTitle3 = midSectionBottom.querySelector('.text-content:nth-of-type(1) h4')
+const midSectTitle4 = midSectionBottom.querySelector('.text-content:nth-of-type(2) h4')
+const midSectTitle5 = midSectionBottom.querySelector('.text-content:nth-of-type(3) h4')
 
-const title6 = allTitles[5]
-title6.textContent = 'CONTACT'
+midSectTitle1.textContent = siteContent['main-content']['features-h4']
+midSectTitle2.textContent = siteContent['main-content']['about-h4']
+midSectTitle3.textContent = siteContent['main-content']['services-h4']
+midSectTitle4.textContent = siteContent['main-content']['product-h4']
+midSectTitle5.textContent = siteContent['main-content']['vision-h4']
 
 // adding p to each title
-const allParas = document.querySelectorAll('p')
+const midSectPara1 = midSection.querySelector('.text-content:nth-of-type(1) p')
+const midSectPara2 = midSection.querySelector('.text-content:nth-of-type(2) p')
+const midSectPara3 = midSectionBottom.querySelector('.text-content:nth-of-type(1) p')
+const midSectPara4 = midSectionBottom.querySelector('.text-content:nth-of-type(2) p')
+const midSectPara5 = midSectionBottom.querySelector('.text-content:nth-of-type(3) p')
 
-const featuresPara = allParas[0]
-featuresPara.textContent = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
-
-const aboutPara = allParas[1]
-aboutPara.textContent = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
-
-const servicesPara = allParas[2]
-servicesPara.textContent = 'Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
-
-const productPara = allParas[3]
-productPara.textContent = 'Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
-
-const visionPara = allParas[4]
-visionPara.textContent = 'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
-
+midSectPara1.textContent = siteContent['main-content']['features-content']
+midSectPara2.textContent = siteContent['main-content']['about-content']
+midSectPara3.textContent = siteContent['main-content']['services-content']
+midSectPara4.textContent = siteContent['main-content']['product-content']
+midSectPara5.textContent = siteContent['main-content']['vision-content']
 
           // middle page image
-const middleImage = document.querySelector('#middle-img')
-middleImage.setAttribute('src', 'img/mid-page-accent.jpg')
+const midSectImage = midSectImg.setAttribute('src', siteContent['main-content']['middle-img-src'])
 
-const contactSection = document.querySelectorAll('.contact p')
+// contact information
+const contactInfo = document.querySelector('.contact')
 
-const firstContactPara = contactSection[0]
-firstContactPara.innerHTML = '123 Way 456 Street <br> Somewhere, USA'
+const contactTitle = contactInfo.querySelector('h4')
+const contactAddress = contactInfo.querySelector('p:nth-of-type(1)')
+const contactPhone = contactInfo.querySelector('p:nth-of-type(2)')
+const contactEmail = contactInfo.querySelector('p:nth-of-type(3)')
 
-const secondContactPara = contactSection[1]
-secondContactPara.textContent = '1 (888) 888-8888'
+contactTitle.textContent = siteContent['contact']['contact-h4']
+contactAddress.textContent = siteContent['contact']['address']
+contactPhone.textContent = siteContent['contact']['phone']
+contactEmail.textContent = siteContent['contact']['email']
 
-const thirdContactPara = contactSection[2]
-thirdContactPara.textContent = 'sales@greatidea.io'
+// footer section
+const footerSection = document.querySelector('footer')
 
-const copyright = document.querySelector('footer p')
-copyright.textContent = 'Copyright Great Idea! 2018'
+const footerCopy = footerSection.querySelector('p')
+footerCopy.textContent = siteContent['footer']['copyright']
 
 // adding new content
-
 const blogLink = document.createElement('a')
 blogLink.textContent = 'Blog'
 blogLink.href = '#'
+// console.log(blogLink)
 
 const nav = document.querySelector('nav')
 nav.appendChild(blogLink)
@@ -140,10 +146,18 @@ socialLink.textContent = 'Social'
 socialLink.href = '#'
 
 const navNew = document.querySelector('nav')
-nav.appendChild(socialLink)
+navNew.appendChild(socialLink)
 
-const navLinksColor = document.querySelectorAll('a')
-Array.from(navLinksColor).forEach (links => {
+
+// changing nav link color
+Array.from(navBar).forEach(links => {
   links.style.color = 'green';
-  links.style.fontWeight = 'bold';
 })
+
+
+
+
+
+
+// const getTitle = document.querySelector('title')
+// getTitle.textContent = 'Great Idea'
