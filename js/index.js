@@ -41,8 +41,25 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+
+let navBar = document.querySelectorAll('nav a')
+// adding new content 
+const blogLink = document.createElement('a')  // blog link 
+blogLink.textContent = 'Blog'
+blogLink.href = '#'
+
+const nav = document.querySelector('nav') // adding it to the nav
+nav.appendChild(blogLink)
+
+const socialLink = document.createElement('a') // social link
+socialLink.textContent = 'Social'
+socialLink.href = '#'
+
+const newNav = document.querySelector('nav') // adding it to the nav
+nav.prepend(socialLink)
+
+
           // nav bar
-const navBar = document.querySelectorAll('nav a')
 
 const navLink1 = navBar[0]
 const navLink2 = navBar[1]
@@ -64,6 +81,8 @@ navLink3.textContent = siteContent['nav']['nav-item-3']
 navLink4.textContent = siteContent['nav']['nav-item-4']
 navLink5.textContent = siteContent['nav']['nav-item-5']
 navLink6.textContent = siteContent['nav']['nav-item-6']
+
+navBar = document.querySelectorAll('nav a');
 
 // top section title and button
 const topSection = document.querySelector('.cta');
@@ -133,21 +152,19 @@ const footerCopy = footerSection.querySelector('p')
 footerCopy.textContent = siteContent['footer']['copyright']
 
 // adding new content
-const blogLink = document.createElement('a')
-blogLink.textContent = 'Blog'
-blogLink.href = '#'
-// console.log(blogLink)
+// const blogLink = document.createElement('a')  // blog link 
+// blogLink.textContent = 'Blog'
+// blogLink.href = '#'
 
-const nav = document.querySelector('nav')
-nav.appendChild(blogLink)
+// const nav = document.querySelector('nav') // adding it to the nav
+// nav.appendChild(blogLink)
 
-const socialLink = document.createElement('a')
-socialLink.textContent = 'Social'
-socialLink.href = '#'
+// const socialLink = document.createElement('a') // social link
+// socialLink.textContent = 'Social'
+// socialLink.href = '#'
 
-const navNew = document.querySelector('nav')
-navNew.appendChild(socialLink)
-
+// const navNew = document.querySelector('nav') // adding it to the nav
+// navNew.appendChild(socialLink)
 
 // changing nav link color
 Array.from(navBar).forEach(links => {
